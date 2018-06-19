@@ -1,0 +1,16 @@
+{
+  "links": {
+    "home": "घर",
+    "about": "बारेमा",
+    "english": "अंग्रेजी संस्करण",
+    "nepali": "नेपाली संस्करण"
+  },
+  "home": {
+    "title": "विश्व कप 2018 मा स्वागत छ",
+    "lang": "नेपाली"
+  },
+  "about": {
+    "title": "About",
+    "introduction": "This page is made to give you more informations."
+  }
+}

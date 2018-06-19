@@ -22,8 +22,14 @@ module.exports = {
   env: {
     baseUrl: process.env.BASE_URL || `http://${host}:${port}`
   },
-
-  plugins: ["./plugins/vuetify.js"],
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: { color: "#3B8070" },
+  router: {
+    middleware: "i18n"
+  },
+  plugins: ["./plugins/vuetify.js", "./plugins/i18n.js"],
   head: {
     title: "Scores 2018",
     meta: [
@@ -55,15 +61,15 @@ module.exports = {
       }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: "#3B8070" },
+
   /*
   ** Build configuration
   */
   css: ["~/assets/css/main.css"],
   build: {},
   modules: ["@nuxtjs/axios", "~/modules/typescript.js"],
-  axios: {}
+  axios: {},
+  generate: {
+    routes: ["/", "/about", "/np", "/np/about"]
+  }
 };

@@ -1,0 +1,16 @@
+{
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "english": "English version",
+    "nepali": "Nepali version"
+  },
+  "home": {
+    "title": "Welcome To World Cup 2018 ",
+    "lang": "English"
+  },
+  "about": {
+    "title": "About",
+    "introduction": "This page is made to give you more informations."
+  }
+}
