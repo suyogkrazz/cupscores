@@ -5,9 +5,15 @@
     "english": "English version",
     "nepali": "Nepali version"
   },
+  "lang": {
+    "num": "en-US"
+  },
   "home": {
     "title": "Welcome To World Cup 2018 ",
     "lang": "English"
+  },
+  "match": {
+    "live": "Live Now"
   },
   "about": {
     "title": "About",
