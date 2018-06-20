@@ -1,6 +1,7 @@
 # cupscores
 
 > World Cup 2018 Scores
+![alt text](https://circleci.com/gh/circleci/mongofinil/tree/master.png?circle-token=b14acf911433d315298235b0c2fbf7b2670a92a8)
 
 ## Build Setup
 
@@ -18,5 +19,3 @@ $ npm start
 # generate static project
 $ npm run generate
 ```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
