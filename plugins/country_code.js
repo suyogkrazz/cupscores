@@ -263,3 +263,11 @@ var countryISOMapping = {
 export function getCountryISO2(countryCode) {
   return countryISOMapping[countryCode];
 }
+
+export function getCountryImg(iso) {
+  let code = getCountryISO2(iso);
+  if (code) {
+    return `http://flagpedia.net/data/flags/normal/${code.toLowerCase()}.png`;
+  }
+  return "https://cdn.browshot.com/static/images/not-found.png";
+}

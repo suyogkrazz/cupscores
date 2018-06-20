@@ -27,7 +27,7 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "nuxt-property-decorator";
 
-import { getCountryISO2 } from "~/plugins/country_code.js";
+import { getCountryImg } from "~/plugins/country_code.js";
 
 @Component({})
 export default class extends Vue {
@@ -35,11 +35,7 @@ export default class extends Vue {
   @Prop() team: string;
 
   getCountryImage(iso) {
-    let code = getCountryISO2(iso);
-    if (code) {
-      return `http://flagpedia.net/data/flags/normal/${code.toLowerCase()}.png`;
-    }
-    return "https://cdn.browshot.com/static/images/not-found.png";
+    return getCountryImg(iso);
   }
 }
 </script>
