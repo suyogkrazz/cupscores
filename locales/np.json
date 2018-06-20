@@ -5,9 +5,27 @@
     "english": "अंग्रेजी संस्करण",
     "nepali": "नेपाली संस्करण"
   },
+  "lang": {
+    "num": "ne-NP"
+  },
   "home": {
     "title": "विश्व कप 2018 मा स्वागत छ",
     "lang": "नेपाली"
+  },
+  "match": {
+    "live": "अहिले लाइभ गर्नुहोस्",
+    "details": "विवरण"
+  },
+  "statistics": {
+    "stats": "टोली तथ्याङ्कहरू",
+    "possession": "मिल्यो",
+    "shots_on_target": "बल लाग्यो",
+    "shots": "स्कोर गर्न प्रयास",
+    "fouls": "फलहरू",
+    "offsides": "अफसाइडहरू",
+    "yellow_cards": "पहेंलो कार्ड",
+    "red_cards": "रातो कार्ड",
+    "corners": "कुनामा"
   },
   "about": {
     "title": "About",

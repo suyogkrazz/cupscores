@@ -5,9 +5,27 @@
     "english": "English version",
     "nepali": "Nepali version"
   },
+  "lang": {
+    "num": "en-US"
+  },
   "home": {
     "title": "Welcome To World Cup 2018 ",
     "lang": "English"
+  },
+  "match": {
+    "live": "Live Now",
+    "details": "Details"
+  },
+  "statistics": {
+    "stats": "TEAM STATS",
+    "possession": "Possession",
+    "shots_on_target": "Shots On Target",
+    "shots": "Shots",
+    "fouls": "Fouls",
+    "offsides": "Offsides",
+    "yellow_cards": "Yellow Card",
+    "red_cards": "Red Card",
+    "corners": "Corners"
   },
   "about": {
     "title": "About",

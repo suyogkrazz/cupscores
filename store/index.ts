@@ -1,23 +1,38 @@
+import axios from "~/plugins/axios.js";
+
 export const state = () => ({
   people: [],
   locales: ["en", "np"],
-  locale: "en"
+  locale: "en",
+  current: []
 });
 
 export const mutations = {
-  setPeople(state, people) {
-    state.people = people;
-  },
   SET_LANG(state, locale) {
     if (state.locales.indexOf(locale) !== -1) {
       state.locale = locale;
     }
+  },
+  setCurrentMatch(state, match) {
+    state.current = match;
   }
 };
 
 export const actions = {
+  async getCurrentMatch({ commit, store }, id) {
+    let { data } = await axios.get(`/matches/`);
+    commit("setCurrentMatch", data.slice(-data.length, 1));
+  },
   async nuxtServerInit({ commit }, { app }) {
-    const people = await app.$axios.$get("./random-data.json");
-    commit("setPeople", people.slice(0, 10));
+    let { data } = await axios.get(`/matches/`);
+    commit("setCurrentMatch", data.slice(-data.length, 1));
   }
+  // async getCurrentMatch({ commit, store }, id) {
+  //   let { data } = await axios.get(`/matches/current`);
+  //   commit("setCurrentMatch", data);
+  // },
+  // async nuxtServerInit({ commit }, { app }) {
+  //   let { data } = await axios.get(`/matches/current`);
+  //   commit("setCurrentMatch", data);
+  // }
 };

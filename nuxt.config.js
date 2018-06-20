@@ -70,6 +70,6 @@ module.exports = {
   modules: ["@nuxtjs/axios", "~/modules/typescript.js"],
   axios: {},
   generate: {
-    routes: ["/", "/about", "/np", "/np/about"]
+    routes: ["/", "/matches", "/np", "/np/matches"]
   }
 };

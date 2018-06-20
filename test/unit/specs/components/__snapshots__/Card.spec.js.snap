@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Logo renders to a snapshot 1`] = `
+<v-flex sm4="">
+    <v-card class="elevation-4">
+        <v-card-media height="200px" src="http://flagpedia.net/data/flags/normal/sa.png" class="white--text"></v-card-media>
+        <v-card-title primary-title="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;">
+            <div>
+                <h3 class="headline mb-0">Saudi Arabia</h3>
+            </div>
+        </v-card-title>
+        <v-card-title primary-title="" style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;">
+            <div>
+                <h3 class="headline mb-0" style="font-size:45px!important;color:blue;">0</h3>
+            </div>
+        </v-card-title>
+    </v-card>
+</v-flex>
+`;
