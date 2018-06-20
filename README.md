@@ -1,7 +1,8 @@
 # cupscores
 
 > World Cup 2018 Scores
-![alt text](https://circleci.com/gh/circleci/mongofinil/tree/master.png?circle-token=b14acf911433d315298235b0c2fbf7b2670a92a8)
+
+[![CircleCI](https://circleci.com/gh/suyogkrazz/cupscores.svg?style=svg)](https://circleci.com/gh/suyogkrazz/cupscores)
 
 ## Build Setup
 
