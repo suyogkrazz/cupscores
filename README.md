@@ -1,9 +1,11 @@
-# cupscores
+# CupScores
 
 > World Cup 2018 Scores
 
 [![CircleCI](https://circleci.com/gh/suyogkrazz/cupscores.svg?style=svg)](https://circleci.com/gh/suyogkrazz/cupscores)
 
+## Live Demo
+https://glacial-oasis-72894.herokuapp.com/
 ## Build Setup
 
 ``` bash
