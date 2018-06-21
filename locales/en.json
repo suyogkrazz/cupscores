@@ -12,6 +12,10 @@
     "title": "Welcome To World Cup 2018 ",
     "lang": "English"
   },
+  "menu": {
+    "home": "Home",
+    "all_matches": "All Matches"
+  },
   "match": {
     "live": "Live Now",
     "details": "Details"

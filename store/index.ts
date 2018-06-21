@@ -1,7 +1,7 @@
 import axios from "~/plugins/axios.js";
 
 export const state = () => ({
-  people: [],
+  matches: [],
   locales: ["en", "np"],
   locale: "en",
   current: []
@@ -13,15 +13,22 @@ export const mutations = {
       state.locale = locale;
     }
   },
+  setAllMatch(state, matches) {
+    state.matches = matches;
+  },
   setCurrentMatch(state, match) {
     state.current = match;
   }
 };
 
 export const actions = {
-  async getCurrentMatch({ commit, store }, id) {
+  async getCurrentMatch({ commit, store }) {
     let { data } = await axios.get(`/matches/`);
     commit("setCurrentMatch", data.slice(-data.length, 1));
+  },
+  async getAllMatch({ commit, store }) {
+    let { data } = await axios.get(`/matches/`);
+    commit("setAllMatch", data);
   },
   async nuxtServerInit({ commit }, { app }) {
     let { data } = await axios.get(`/matches/`);

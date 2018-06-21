@@ -12,7 +12,7 @@
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-tile-action>
               <v-list-tile-content>
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+                <v-list-tile-title>{{ $t(`menu.${item.title}`) }}</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
         </v-list>
@@ -60,8 +60,8 @@ export default class extends Vue {
   ];
   drawer: boolean = false;
   menu: Array<any> = [
-    { title: "Home", icon: "dashboard", path: "" },
-    { title: "All Matches", icon: "flag", path: "matches" }
+    { title: "home", icon: "dashboard", path: "" },
+    { title: "all_matches", icon: "flag", path: "matches" }
   ];
   changeLang(path) {
     this.$router.replace({ path: path });

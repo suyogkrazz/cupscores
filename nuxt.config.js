@@ -25,7 +25,12 @@ module.exports = {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: "#3B8070" },
+  loading: { color: "#fc7b00" },
+  loadingIndicator: {
+    name: "circle",
+    color: "#3B8070",
+    background: "white"
+  },
   router: {
     middleware: "i18n"
   },
