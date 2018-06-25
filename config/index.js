@@ -14,15 +14,16 @@ const I18N = {
       name: "Nepali"
     }
   ],
-  //   defaultLocale: "en",
+  defaultLocale: "en",
   parsePages: false,
   pages: {
     matches: {
-      np: "/a-propos",
-      en: "/about-us"
+      np: "/खेलहरू",
+      en: "/matches"
     },
     upcoming: {
-      np: "/articles"
+      np: "/आगामी",
+      en: "/upcoming"
     }
   },
   vueI18n: {

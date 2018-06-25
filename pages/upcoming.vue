@@ -40,7 +40,12 @@ import { getCountryImg } from "~/plugins/country_code.js";
 })
 export default class extends Vue {
   @State matches;
-
+  nuxtI18n= {
+    paths: {
+      en: '/about-us', // -> accessible at /about-us (no prefix since it's the default locale)
+      np: '/a-propos'
+    }
+  }
   fetch({ store }) {
     store.dispatch("getAllMatch");
   }
