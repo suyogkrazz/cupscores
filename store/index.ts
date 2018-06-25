@@ -23,16 +23,22 @@ export const mutations = {
 
 export const actions = {
   async getCurrentMatch({ commit, store }) {
-    let { data } = await axios.get(`/matches/`);
-    commit("setCurrentMatch", data.slice(-data.length, 1));
+    try {
+      let { data } = await axios.get(`/matches/`);
+      commit("setCurrentMatch", data.slice(-data.length, 1));
+    } catch (e) {}
   },
   async getAllMatch({ commit, store }) {
-    let { data } = await axios.get(`/matches/`);
-    commit("setAllMatch", data);
+    try {
+      let { data } = await axios.get(`/matches/`);
+      commit("setAllMatch", data);
+    } catch (e) {}
   },
   async nuxtServerInit({ commit }, { app }) {
-    let { data } = await axios.get(`/matches/`);
-    commit("setCurrentMatch", data.slice(-data.length, 1));
+    try {
+      let { data } = await axios.get(`/matches/`);
+      commit("setCurrentMatch", data.slice(-data.length, 1));
+    } catch (e) {}
   }
   // async getCurrentMatch({ commit, store }, id) {
   //   let { data } = await axios.get(`/matches/current`);

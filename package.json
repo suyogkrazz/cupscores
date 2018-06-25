@@ -6,16 +6,17 @@
     "@nuxtjs/axios": "^5.0.0",
     "axios": "^0.18.0",
     "country-iso-3-to-2": "^1.0.1",
+    "material-icons": "^0.2.3",
     "moment": "^2.22.2",
     "nuxt": "^1.3.0",
+    "nuxt-i18n": "^4.0.1",
     "nuxt-property-decorator": "^1.2.0",
     "vue-i18n": "^7.8.1",
     "vuetify": "^1.0.19",
     "vuex-class": "^0.3.0"
   },
   "engines": {
-    "npm": "5.6.x",
-    "yarn": "1.4.0"
+    "npm": "5.6.x"
   },
   "scripts": {
     "test": "npm run unit",
@@ -45,6 +46,8 @@
     "jest-serializer-vue": "^0.3.0",
     "jest-vue-preprocessor": "^1.3.1",
     "nuxt-class-component": "^1.1.3",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
     "ts-jest": "^22.0.1",
     "ts-loader": "^3.2.0",
     "typescript": "^2.6.2",

@@ -1,4 +1,6 @@
+const { I18N } = require("./config");
 const parseArgs = require("minimist");
+const path = require("path");
 const argv = parseArgs(process.argv.slice(2), {
   alias: {
     H: "hostname",
@@ -30,9 +32,6 @@ module.exports = {
     name: "circle",
     color: "#3B8070",
     background: "white"
-  },
-  router: {
-    middleware: "i18n"
   },
   plugins: ["./plugins/vuetify.js", "./plugins/i18n.js"],
   head: {
@@ -70,11 +69,18 @@ module.exports = {
   /*
   ** Build configuration
   */
-  css: ["~/assets/css/main.css"],
+  css: [
+    "~/assets/css/main.css",
+    "~/node_modules/material-icons/iconfont/material-icons.css",
+    {
+      src: path.join(__dirname, "/assets/css/app.styl"),
+      lang: "styl"
+    }
+  ],
   build: {},
-  modules: ["@nuxtjs/axios", "~/modules/typescript.js"],
-  axios: {},
-  generate: {
-    routes: ["/", "/matches", "/np", "/np/matches"]
-  }
+  modules: ["@nuxtjs/axios", "~/modules/typescript.js", ["nuxt-i18n", I18N]],
+  axios: {}
+  // generate: {
+  //   routes: ["/", "/matches", "/np", "/np/matches"]
+  // }
 };

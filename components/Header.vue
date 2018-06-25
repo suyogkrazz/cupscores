@@ -7,7 +7,7 @@
         app
       >
         <v-list dense>
-          <v-list-tile v-for="item in menu" :key="item.title" @click="changeRoute($i18n.path(item.path))">
+          <v-list-tile v-for="item in menu" :key="item.title" @click="changeRoute(localePath(item.path))">
               <v-list-tile-action>
                 <v-icon>{{ item.icon }}</v-icon>
               </v-list-tile-action>
@@ -37,7 +37,7 @@
               <v-icon dark>arrow_drop_down</v-icon>
             </v-toolbar-title>
             <v-list>
-              <v-list-tile v-for="item in items" :key="item.title" @click="changeLang(`/${item.locale}`)">
+              <v-list-tile v-for="item in items" :key="item.title" @click="changeRoute(switchLocalePath(item.locale))">
                 <v-list-tile-title>{{ item.title }}</v-list-tile-title>
               </v-list-tile>
             </v-list>
@@ -60,12 +60,10 @@ export default class extends Vue {
   ];
   drawer: boolean = false;
   menu: Array<any> = [
-    { title: "home", icon: "dashboard", path: "" },
-    { title: "all_matches", icon: "flag", path: "matches" }
+    { title: "home", icon: "dashboard", path: "/" },
+    { title: "all_matches", icon: "flag", path: "matches" },
+    { title: "upcoming", icon: "flag", path: "upcoming" }
   ];
-  changeLang(path) {
-    this.$router.replace({ path: path });
-  }
   changeRoute(path) {
     this.$router.push({ path: path });
   }
