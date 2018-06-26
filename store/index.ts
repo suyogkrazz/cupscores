@@ -21,6 +21,12 @@ export const mutations = {
   }
 };
 
+export const getters = {
+  getFutureGames(state) {
+    return state.matches.filter(item => item.status === "future");
+  }
+};
+
 export const actions = {
   async getCurrentMatch({ commit, store }) {
     try {
@@ -38,6 +44,7 @@ export const actions = {
     try {
       let { data } = await axios.get(`/matches/`);
       commit("setCurrentMatch", data.slice(-data.length, 1));
+      commit("setAllMatch", data);
     } catch (e) {}
   }
   // async getCurrentMatch({ commit, store }, id) {

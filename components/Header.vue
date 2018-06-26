@@ -60,7 +60,7 @@ export default class extends Vue {
   ];
   drawer: boolean = false;
   menu: Array<any> = [
-    { title: "home", icon: "dashboard", path: "/" },
+    { title: "home", icon: "dashboard", path: "index" },
     { title: "all_matches", icon: "flag", path: "matches" },
     { title: "upcoming", icon: "flag", path: "upcoming" }
   ];

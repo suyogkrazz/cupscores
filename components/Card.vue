@@ -13,7 +13,7 @@
           </v-card-title>
           <v-card-title primary-title  style=" display: flex;flex-wrap: wrap;justify-content: center; align-items: center;">
             <div>
-              <h3 class="headline mb-0" style="font-size: 45px!important;color: blue;">{{match[`${team}_team`].goals}}</h3>
+              <h3 class="headline mb-0" style="font-size: 45px!important;color: blue;text-align:left;">{{match[`${team}_team`].goals}}</h3>
             </div>    
           </v-card-title>
           <!-- <v-card-title style=" display: flex;flex-wrap: wrap;justify-content: center; align-items: center;">

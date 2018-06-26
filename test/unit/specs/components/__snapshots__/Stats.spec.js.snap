@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Logo renders to a snapshot 1`] = `
+<v-card>
+    <v-divider></v-divider>
+    <v-list>
+        <v-list-tile>
+            <v-list-tile-content>
+                <img src="http://flagpedia.net/data/flags/normal/ru.png" class="icon-image">
+            </v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">
+                <img src="http://flagpedia.net/data/flags/normal/sa.png" class="icon-image">
+            </v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>13</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">6</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>7</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">0</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>40</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">60</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>22</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">10</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>1</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">1</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>0</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">0</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>3</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">1</v-list-tile-content>
+        </v-list-tile>
+        <v-list-tile>
+            <v-list-tile-content>6</v-list-tile-content>
+            <v-list-tile-content class="align-center"></v-list-tile-content>
+            <v-list-tile-content class="align-end">2</v-list-tile-content>
+        </v-list-tile>
+    </v-list>
+</v-card>
+`;

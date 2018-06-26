@@ -18,6 +18,7 @@
     "upcoming": "Upcoming Matches"
   },
   "match": {
+    "search": "Search Match",
     "live": "Live Now",
     "details": "Details"
   },

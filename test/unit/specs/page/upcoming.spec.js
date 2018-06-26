@@ -1,12 +1,13 @@
 import Vuex from "vuex";
 import { shallowMount, createLocalVue } from "@vue/test-utils";
-import Page from "~/pages/matches.vue";
+import Page from "~/pages/upcoming.vue";
 
 import matches from "../../../data/matches.js";
 const localVue = createLocalVue();
 
 localVue.use(Vuex);
 const $t = () => {};
+const futureMatches = matches.filter(item => item.status === "future");
 describe(`all matches page`, () => {
   let store;
 
@@ -14,6 +15,9 @@ describe(`all matches page`, () => {
     store = new Vuex.Store({
       actions: {
         getCurrentMatch: jest.fn()
+      },
+      getters: {
+        getFutureGames: () => futureMatches
       },
       state: {
         matches: matches
@@ -23,12 +27,11 @@ describe(`all matches page`, () => {
 
   it(`should mock store correctly`, () => {
     const wrapper = shallowMount(Page, { mocks: { $t }, store, localVue });
-    expect(wrapper.vm.matches).toEqual(matches);
-    expect(wrapper.vm.filteredMatches.length).toEqual(64);
+    expect(wrapper.vm.getFutureGames).toEqual(futureMatches);
   });
   it(`should change getter when filter is set correctly`, () => {
     const wrapper = shallowMount(Page, { mocks: { $t }, store, localVue });
     wrapper.vm.search = "rus";
-    expect(wrapper.vm.filteredMatches.length).toEqual(3);
+    expect(wrapper.vm.upcomingMatches.length).toEqual(1);
   });
 });

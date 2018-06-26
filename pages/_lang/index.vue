@@ -16,69 +16,14 @@
             </div>
         </v-flex>
         <card :match="match" :team="`away`"></card>
-        
       </v-layout>
-     
   </v-card> 
    <v-expansion-panel expand>
         <v-expansion-panel-content :value="true">
-          <div slot="header" class="heading">
-            <h2>{{$t('match.details') }}</h2>
-          </div>
-          <v-card>
-          <v-divider></v-divider>
-          <v-list >
-            <v-list-tile>
-              <v-list-tile-content>
-                <img  :src="getCountryImage(match.home_team.code)" class="icon-image" />
-            </v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.stats') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">
-                <img  :src="getCountryImage(match.away_team.code)" class="icon-image" />
-                </v-list-tile-content>
-              </v-list-tile>
-            <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.attempts_on_goal}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.shots') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.attempts_on_goal}}</v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.on_target}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.shots_on_target') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.on_target}}</v-list-tile-content>
-            </v-list-tile>
-             <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.ball_possession}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.possession') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.ball_possession}}</v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.fouls_committed}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.fouls') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.fouls_committed}}</v-list-tile-content>
-            </v-list-tile>
-              <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.yellow_cards}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.yellow_cards') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.yellow_cards}}</v-list-tile-content>
-            </v-list-tile>
-              <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.red_cards}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.red_cards') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.red_cards}}</v-list-tile-content>
-            </v-list-tile>
-              <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.offsides}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.offsides') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.offsides}}</v-list-tile-content>
-            </v-list-tile>
-              <v-list-tile>
-              <v-list-tile-content>{{match.home_team_statistics.corners}}</v-list-tile-content>
-              <v-list-tile-content class="align-center">{{$t('statistics.corners') }}</v-list-tile-content>
-              <v-list-tile-content class="align-end">{{match.away_team_statistics.corners}}</v-list-tile-content>
-            </v-list-tile>
-            </v-list>  
-          </v-card>
+            <div slot="header" class="heading">
+              <h2>{{$t('match.details') }}</h2>
+            </div>
+            <stats :match="match"></stats>
         </v-expansion-panel-content>
     </v-expansion-panel>
   </div>
@@ -89,13 +34,14 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import { State } from "vuex-class";
 import { Route } from "vue-router";
-
+import Stats from "~/components/Stats.vue";
 import Card from "~/components/Card.vue";
 
 import { getCountryImg } from "~/plugins/country_code.js";
 @Component({
   components: {
-    Card
+    Card,
+    Stats
   }
 })
 export default class extends Vue {
