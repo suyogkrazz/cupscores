@@ -1,10 +1,8 @@
 import Vuex from "vuex";
 import { shallowMount, createLocalVue } from "@vue/test-utils";
 import Page from "~/pages/_lang/index.vue";
-
 import matches from "../../../data/matches.js";
 const localVue = createLocalVue();
-
 localVue.use(Vuex);
 const $t = () => {};
 describe(`Page homepage`, () => {
