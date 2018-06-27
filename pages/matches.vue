@@ -9,7 +9,7 @@
         <v-card v-if="selectedMatch" class="pa-4">
           <stats :match="selectedMatch"></stats>
           <v-card-actions>
-            <v-btn color="primary" flat @click.stop="matchDialog=false">Close</v-btn>
+            <v-btn color="primary" flat @click.stop="matchDialog=false">{{$t('menu.close')}}</v-btn>
           </v-card-actions>
         </v-card>
     </v-dialog>    

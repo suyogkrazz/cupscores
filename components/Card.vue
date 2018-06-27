@@ -16,11 +16,6 @@
               <h3 class="headline mb-0" style="font-size: 45px!important;color: blue;text-align:left;">{{match[`${team}_team`].goals}}</h3>
             </div>    
           </v-card-title>
-          <!-- <v-card-title style=" display: flex;flex-wrap: wrap;justify-content: center; align-items: center;">
-            <div v-for="match_events in goalEvents(match.home_team_events)" :key="match_events.id" >
-              <div class="grey--text" >{{match_events.player}}</div><br/>
-            </div>
-          </v-card-title> -->
       </v-card>
   </v-flex>
 </template>
