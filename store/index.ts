@@ -31,6 +31,7 @@ export const actions = {
   async getCurrentMatch({ commit, store }) {
     try {
       let { data } = await axios.get(`/matches/`);
+      // faking live data
       commit("setCurrentMatch", data.slice(-data.length, 1));
     } catch (e) {}
   },
@@ -40,9 +41,16 @@ export const actions = {
       commit("setAllMatch", data);
     } catch (e) {}
   },
+  async getAllTeams({ commit, store }) {
+    try {
+      let { data } = await axios.get(`/matches/`);
+      commit("setAllMatch", data);
+    } catch (e) {}
+  },
   async nuxtServerInit({ commit }, { app }) {
     try {
       let { data } = await axios.get(`/matches/`);
+      // faking live data
       commit("setCurrentMatch", data.slice(-data.length, 1));
       commit("setAllMatch", data);
     } catch (e) {}
