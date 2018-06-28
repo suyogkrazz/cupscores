@@ -15,7 +15,8 @@
   "menu": {
     "home": "Home",
     "all_matches": "All Matches",
-    "upcoming": "Upcoming Matches"
+    "upcoming": "Upcoming Matches",
+    "close": "Close"
   },
   "match": {
     "search": "Search Match",
