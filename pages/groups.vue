@@ -12,7 +12,7 @@
                 class="elevation-1"
             >
                 <template slot="items" slot-scope="props">
-                    <td>{{ props.item.country }}</td>  
+                    <td> <img  style="width: 25px;height: 25px;" :src="getCountryImage(props.item.fifa_code)" class="icon-image" /> <span style="margin-left: 10%;">{{props.item.country}}</span> </td>  
                     <td class="text-xs-center">{{ props.item.wins }}</td>
                     <td class="text-xs-center">{{ props.item.losses }}</td>
                     <td class="text-xs-center">{{ props.item.draws }}</td>
@@ -67,11 +67,14 @@ export default class extends Vue {
   fetch({ store }) {
     store.dispatch("getAllGroups");
   }
+  getCountryImage(iso) {
+    return getCountryImg(iso);
+  }
 }
 </script>
 <style>
 .icon-image {
-  width: 45px;
-  height: 45px;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 </style>
