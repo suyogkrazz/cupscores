@@ -78,8 +78,10 @@ export default class extends Vue {
     });
   }
   openDetails(match) {
-    this.selectedMatch = match;
-    this.matchDialog = true;
+    if (match.home_team_statistics) {
+      this.selectedMatch = match;
+      this.matchDialog = true;
+    }
   }
 
   getCountryImage(iso) {
