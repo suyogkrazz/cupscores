@@ -4,7 +4,8 @@ export const state = () => ({
   matches: [],
   locales: ["en", "np"],
   locale: "en",
-  current: []
+  current: [],
+  groups: []
 });
 
 export const mutations = {
@@ -15,6 +16,9 @@ export const mutations = {
   },
   setAllMatch(state, matches) {
     state.matches = matches;
+  },
+  setAllGroups(state, groups) {
+    state.groups = groups;
   },
   setCurrentMatch(state, match) {
     state.current = match;
@@ -41,10 +45,10 @@ export const actions = {
       commit("setAllMatch", data);
     } catch (e) {}
   },
-  async getAllTeams({ commit, store }) {
+  async getAllGroups({ commit, store }) {
     try {
-      let { data } = await axios.get(`/matches/`);
-      commit("setAllMatch", data);
+      let { data } = await axios.get(`/teams/group_results`);
+      commit("setAllGroups", data);
     } catch (e) {}
   },
   async nuxtServerInit({ commit }, { app }) {
