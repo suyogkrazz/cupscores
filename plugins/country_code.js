@@ -257,7 +257,7 @@ var countryISOMapping = {
   CRO: "HR",
   CRC: "CR",
   SUI: "CH",
-  GER: "GE"
+  GER: "DE"
 };
 
 export function getCountryISO2(countryCode) {
