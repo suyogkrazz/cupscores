@@ -16,7 +16,9 @@
     "home": "Home",
     "all_matches": "All Matches",
     "upcoming": "Upcoming Matches",
-    "close": "Close"
+    "close": "Close",
+    "group": "Group",
+    "team": "Team"
   },
   "match": {
     "search": "Search Match",

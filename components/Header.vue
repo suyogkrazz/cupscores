@@ -62,7 +62,8 @@ export default class extends Vue {
   menu: Array<any> = [
     { title: "home", icon: "dashboard", path: "index" },
     { title: "all_matches", icon: "flag", path: "matches" },
-    { title: "upcoming", icon: "flag", path: "upcoming" }
+    { title: "upcoming", icon: "access_time", path: "upcoming" },
+    { title: "group", icon: "group", path: "groups" }
   ];
   changeRoute(path) {
     this.$router.push({ path: path });

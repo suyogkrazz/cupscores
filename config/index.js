@@ -24,6 +24,10 @@ const I18N = {
     upcoming: {
       np: "/आगामी",
       en: "/upcoming"
+    },
+    groups: {
+      np: "/समूह",
+      en: "/groups"
     }
   },
   vueI18n: {
