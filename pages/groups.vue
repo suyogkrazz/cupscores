@@ -37,7 +37,7 @@ import { getCountryImg } from "~/plugins/country_code.js";
 })
 export default class extends Vue {
   @State groups;
-  headers = [
+  headers: Array<any> = [
     {
       text: "Team",
       sortable: false,
