@@ -32,13 +32,13 @@ export const getters = {
 };
 
 export const actions = {
-  async getCurrentMatch({ commit, store }) {
-    try {
-      let { data } = await axios.get(`/matches/`);
-      // faking live data
-      commit("setCurrentMatch", data.slice(-data.length, 1));
-    } catch (e) {}
-  },
+  // async getCurrentMatch({ commit, store }) {
+  //   try {
+  //     let { data } = await axios.get(`/matches/`);
+  //     // faking live data
+  //     commit("setCurrentMatch", data.slice(-data.length, 1));
+  //   } catch (e) {}
+  // },
   async getAllMatch({ commit, store }) {
     try {
       let { data } = await axios.get(`/matches/`);
@@ -51,20 +51,14 @@ export const actions = {
       commit("setAllGroups", data);
     } catch (e) {}
   },
-  async nuxtServerInit({ commit }, { app }) {
+  async getCurrentMatch({ commit, store }) {
+    let { data } = await axios.get(`/matches/current`);
+    commit("setCurrentMatch", data);
+  },
+  async nuxtServerInit({ commit, dispatch }, { app }) {
     try {
-      let { data } = await axios.get(`/matches/`);
-      // faking live data
-      commit("setCurrentMatch", data.slice(-data.length, 1));
-      commit("setAllMatch", data);
+      let { data } = await axios.get(`/matches/current`);
+      commit("setCurrentMatch", data);
     } catch (e) {}
   }
-  // async getCurrentMatch({ commit, store }, id) {
-  //   let { data } = await axios.get(`/matches/current`);
-  //   commit("setCurrentMatch", data);
-  // },
-  // async nuxtServerInit({ commit }, { app }) {
-  //   let { data } = await axios.get(`/matches/current`);
-  //   commit("setCurrentMatch", data);
-  // }
 };
